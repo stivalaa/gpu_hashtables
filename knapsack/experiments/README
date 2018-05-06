@@ -1,0 +1,26 @@
+scratchpad work for experiments on GPU CUDA implementation of knapsack.
+
+This data is from implementation with and without the 'random start'
+enhancement, showing that without it the recomputation grows too fast
+so do not get speedup past a couple of thousand threads.
+with the 'random start' enhancement, with 1 block of 32 threads doing
+the normal program (starting at the actual (i,w) we want to compute)
+and all the others starting at random points, we get better speedup
+as the wasted computation only grows to abuot 4.5 times at the most,
+not 200 times.
+
+These were all doen with all insrumentation compiled in (so -y option can be
+used) and with one isntacne gen.1.500.500.10
+
+Have to manually recompile for each test so not automated, started at 1 thread,
+increszed therads per block (NUM_THERADS) up to 32, then incrase NUM_BLOCKS
+past that. Some experiments with varying block/thread counts show having
+more than 32 threads/block doesn't eralyl help.
+
+similarly, tried having 1/2, 1/4, 1/32 and a few other values of threads
+to the random start (or even all threads but tid==0 doing randoms start),
+doesn't work at all really, best result by far is 32 threads in one block
+doing problem, al thre rest doing random start
+
+ADS
+Wed Jan  9 15:14:05 EST 2013

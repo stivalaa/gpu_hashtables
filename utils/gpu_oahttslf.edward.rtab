@@ -1,0 +1,15 @@
+# Run as: ./timegputests.sh oahttslf_gpu_test
+# at: Fri Jan 25 11:37:07 EST 2013
+# by: stivalaa
+# on: Linux edward092 2.6.32-220.el6.x86_64 #1 SMP Sat Dec 10 17:04:11 CST 2011 x86_64 x86_64 x86_64 GNU/Linux
+threads iteration ms
+NA 1 1
+NA 2 1
+NA 3 1
+NA 4 1
+NA 5 1
+NA 6 1
+NA 7 1
+NA 8 1
+NA 9 1
+NA 10 1
