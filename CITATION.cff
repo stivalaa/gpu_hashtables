@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Stivala"
+  given-names: "Alex"
+  orcid: "https://orcid.org/0000-0002-2442-4743"
+title: "Lock-free Concurrent Hash Tables and Parallel Dynamic Programming on the GPU"
+url: "https://github.com/stivalaa/gpu_hashtables"
